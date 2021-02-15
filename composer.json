@@ -1,0 +1,22 @@
+{
+    "name": "hibrido/module-buttoncolor",
+    "description": "modulo button color",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jorge Sato",
+            "email": "gutosato@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Hibrido\\Buttoncolor\\": ""
+        }
+    }
+}
