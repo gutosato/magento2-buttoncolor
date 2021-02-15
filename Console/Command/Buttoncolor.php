@@ -38,9 +38,14 @@ class Buttoncolor extends Command
         InputInterface $input,
         OutputInterface $output
     ) {
-        $color = $input->getOption(self::COLOR_HEX);
+        $color = strtoupper($input->getOption(self::COLOR_HEX));
         $store = $input->getOption(self::STORE_ID);
         $storeObj = $this->storeManager->getStore($store);
+        if (!preg_match("/^[0-9A-F]{6}$/", $color)) {
+            throw new \InvalidArgumentException(
+                'Cor informada inválida. '.$color
+            );
+        }
         if(!$storeObj->getStoreId()){
             $this->resourceConfig->saveConfig('hibrido_buttoncolor/general_config/color_hex', $color, 'default', 0);
             $storeName = 'default';
