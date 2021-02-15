@@ -3,7 +3,7 @@
 	<type name="Magento\Framework\Console\CommandList">
 		<arguments>
 			<argument name="commands" xsi:type="array">
-				<item name="buttoncolor" xsi:type="object">Hibrido\Buttoncolor\Console\Command\Buttoncolor</item>
+				<item name="color-change" xsi:type="object">Hibrido\Buttoncolor\Console\Command\Buttoncolor</item>
 			</argument>
 		</arguments>
 	</type>

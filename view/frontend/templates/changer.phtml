@@ -3,7 +3,8 @@
  * @var $block \Hibrido\Buttoncolor\Block\Changer
  */
 ?>
-<div>
-	<?= $block->applyCss() ?>
-	<?= __('Hello Hibrido_Buttoncolor::changer.phtml') ?>
-</div>
+<style type="text/css">
+	.action.primary {
+		background: <?= '#'.$block->getButtonColorConfig() ?> !important;
+	}
+</style>

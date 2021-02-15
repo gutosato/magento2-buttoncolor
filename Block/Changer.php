@@ -22,9 +22,9 @@ class Changer extends \Magento\Framework\View\Element\Template
     /**
      * @return string
      */
-    public function applyCss()
+    public function getButtonColorConfig()
     {
-        //Your block code
-        return __('Hello Developer! This how to get the storename: %1 and this is the way to build a url: %2', $this->_storeManager->getStore()->getName(), $this->getUrl('contacts'));
+        $storeId = $this->_storeManager->getStore()->getId();
+        return $this->_scopeConfig->getValue('hibrido_buttoncolor/general_config/color_hex', \Magento\Store\Model\ScopeInterface::SCOPE_STORE, $storeId);
     }
 }
