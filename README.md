@@ -10,6 +10,6 @@ php bin/magento color-change --color 'FFFFFF' --store 1
 ## Instalacao
 - Para fazer a instalação do modulo basta executar os seguintes comandos abaixo.
 ```ssh
-composer config repositories.magento2-buttoncolor git "https://github.com/gutosato/magento2-buttoncolor.git"
-composer require hibrido/magento2-buttoncolor
+composer config repositories.module-buttoncolor vcs "git@github.com:gutosato/magento2-buttoncolor.git"
+composer require hibrido/module-buttoncolor:^1
 ```
